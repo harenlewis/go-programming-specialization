@@ -12,6 +12,8 @@ func main() {
 
 	fmt.Scan(&word)
 
+	word = strings.ToLower(word)
+
 	fmt.Println("String:", word[:1])
 	first_char := word[:1]
 	last_char := word[len(word)-1:]
