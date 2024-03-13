@@ -23,8 +23,13 @@ func main() {
 	// fmt.Println("Address: ", address)
 
 	// create a map
+	personMap := make(map[string]string)
+	personMap["name"] = name
+	personMap["address"] = address
+
 	// use Marshal() to create a JSON object
-	u, err := json.Marshal(Person{Name: name, Address: address})
+	// u, err := json.Marshal(Person{Name: name, Address: address})
+	u, err := json.Marshal(personMap)
 
 	if err != nil {
 		panic(err)
